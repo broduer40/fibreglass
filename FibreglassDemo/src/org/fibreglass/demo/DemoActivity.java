@@ -4,12 +4,17 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
+import org.fibreglass.TestView;
+
 public class DemoActivity extends Activity {
+	private TestView mView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo);
+    	mView = new TestView(this);
+        
+        setContentView(mView);
     }
 
     @Override
